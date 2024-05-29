@@ -10,11 +10,12 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          background: '#000000', // Adjust to match the Next.js dark background
-          surface: '#111111',    // Adjust to match the Next.js surface color
-          text: '#FFFFFF',       // Adjust to match the Next.js text color
-          primary: '#0070f3',    // Adjust to match the Next.js primary color
+          background: '#000000',
+          surface: '#111111',
+          text: '#FFFFFF',
+          primary: '#0070f3',
         },
+        primary: '#0070f3',
       },
     },
   },

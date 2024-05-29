@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,7 +14,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [theme, setTheme] = useState('light');
-  const [currentSection, setCurrentSection] = useState('projects');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -26,21 +26,25 @@ export default function RootLayout({
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     localStorage.setItem('theme', theme);
   }, [theme]);
 
   return (
-    <html lang="en" className={`${inter.className} ${theme === 'dark' ? 'dark' : ''}`}>
+    <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-gray-100 dark:bg-dark-background text-gray-900 dark:text-dark-text flex flex-col">
         <header className="flex justify-between items-center p-6 bg-gray-200 dark:bg-dark-surface shadow-md">
           <h1 className="text-3xl font-bold">My Portfolio</h1>
           <nav className="flex space-x-4">
-            <button onClick={() => setCurrentSection('projects')} className="text-lg font-medium hover:underline">Projects</button>
-            <button onClick={() => setCurrentSection('music')} className="text-lg font-medium hover:underline">Music</button>
-            <button onClick={() => setCurrentSection('architecture')} className="text-lg font-medium hover:underline">Architecture</button>
-            <button onClick={() => setCurrentSection('photography')} className="text-lg font-medium hover:underline">Photography</button>
-            <button onClick={() => setCurrentSection('blog')} className="text-lg font-medium hover:underline">Blog</button>
+            <Link href="/projects" className="text-lg font-medium hover:underline">Projects</Link>
+            <Link href="/music" className="text-lg font-medium hover:underline">Music</Link>
+            <Link href="/architecture" className="text-lg font-medium hover:underline">Architecture</Link>
+            <Link href="/photography" className="text-lg font-medium hover:underline">Photography</Link>
+            <Link href="/blog" className="text-lg font-medium hover:underline">Blog</Link>
           </nav>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -55,9 +59,7 @@ export default function RootLayout({
           </button>
         </header>
         <main className="container mx-auto px-4 py-8 flex-grow">
-          {React.Children.map(children, (child) => 
-            React.cloneElement(child as React.ReactElement, { currentSection })
-          )}
+          {children}
         </main>
         <footer className="p-4 text-center bg-gray-200 dark:bg-dark-surface mt-auto">
           © 2024 My Portfolio
@@ -66,5 +68,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 
