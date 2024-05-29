@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,9 +44,14 @@ export default function RootLayout({
           </nav>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 rounded bg-gray-300 dark:bg-dark-surface text-gray-900 dark:text-dark-text"
+            className="flex items-center p-2 rounded bg-gray-300 dark:bg-dark-surface text-gray-900 dark:text-dark-text hover:bg-gray-400 dark:hover:bg-gray-600 transition"
+            title={`Toggle to ${theme === 'dark' ? 'light' : 'dark'} mode`}
           >
-            Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
+            {theme === 'dark' ? (
+              <SunIcon className="h-6 w-6 text-yellow-500" />
+            ) : (
+              <MoonIcon className="h-6 w-6 text-blue-500" />
+            )}
           </button>
         </header>
         <main className="container mx-auto px-4 py-8 flex-grow">
@@ -60,4 +66,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
