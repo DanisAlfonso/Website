@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 interface ProjectCardProps {
   username: string;
   repository: string;
+  description: string;
 }
 
 interface Project {
@@ -13,7 +14,7 @@ interface Project {
   html_url: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository, description }) => {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -56,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository }) => {
           {project.name}
         </a>
       </h3>
-      <p>{project.description}</p>
+      <p>{description}</p>
     </div>
   );
 };
