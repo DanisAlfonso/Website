@@ -31,8 +31,8 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${inter.className} ${theme === 'dark' ? 'dark' : ''}`}>
-      <body className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
-        <header className="flex justify-between items-center p-6 bg-gray-200 dark:bg-gray-800 shadow-md">
+      <body className="min-h-screen bg-gray-100 dark:bg-dark-background text-gray-900 dark:text-dark-text flex flex-col">
+        <header className="flex justify-between items-center p-6 bg-gray-200 dark:bg-dark-surface shadow-md">
           <h1 className="text-3xl font-bold">My Portfolio</h1>
           <nav className="flex space-x-4">
             <button onClick={() => setCurrentSection('projects')} className="text-lg font-medium hover:underline">Projects</button>
@@ -43,7 +43,7 @@ export default function RootLayout({
           </nav>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 rounded bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+            className="p-2 rounded bg-gray-300 dark:bg-dark-surface text-gray-900 dark:text-dark-text"
           >
             Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
           </button>
@@ -53,7 +53,7 @@ export default function RootLayout({
             React.cloneElement(child as React.ReactElement, { currentSection })
           )}
         </main>
-        <footer className="p-4 text-center bg-gray-200 dark:bg-gray-800 mt-auto">
+        <footer className="p-4 text-center bg-gray-200 dark:bg-dark-surface mt-auto">
           © 2024 My Portfolio
         </footer>
       </body>
