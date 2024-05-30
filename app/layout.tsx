@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -79,8 +80,21 @@ export default function RootLayout({
         <main className="container mx-auto px-4 py-8 flex-grow mt-20 md:mt-24">
           {children}
         </main>
-        <footer className="p-4 text-center bg-gray-200 dark:bg-dark-surface mt-auto">
-          © 2024 DNR
+        <footer className="bg-gray-200 dark:bg-dark-surface py-8 mt-auto">
+          <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-center text-gray-700 dark:text-gray-300">© 2024 DNR. All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaFacebook className="h-6 w-6" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaTwitter className="h-6 w-6" />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaGithub className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>
