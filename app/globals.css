@@ -31,3 +31,16 @@ button {
   transition: background-color 0.3s, color 0.3s;
 }
 
+a {
+  @apply text-primary dark:text-primary;
+}
+
+a:hover {
+  @apply underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
