@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-gray-100 dark:bg-dark-background text-gray-900 dark:text-dark-text flex flex-col">
         <header className="flex justify-between items-center p-6 bg-gray-200 dark:bg-dark-surface shadow-md">
-          <h1 className="text-3xl font-bold">My Portfolio</h1>
+          <h1 className="text-3xl font-bold">DNR</h1>
           <nav className="flex space-x-4">
             <Link href="/projects" className="text-lg font-medium hover:underline">Projects</Link>
             <Link href="/music" className="text-lg font-medium hover:underline">Music</Link>
@@ -62,7 +62,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="p-4 text-center bg-gray-200 dark:bg-dark-surface mt-auto">
-          © 2024 My Portfolio
+          © 2024 DNR
         </footer>
       </body>
     </html>

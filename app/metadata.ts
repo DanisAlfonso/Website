@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'My Portfolio',
+  title: 'DNR',
   description: 'Showcasing my projects in software development, music composition, architecture, photography, and blogging.',
 };
 

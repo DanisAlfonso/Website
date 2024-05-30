@@ -12,7 +12,7 @@ module.exports = {
         dark: {
           background: '#000000',
           surface: '#111111',
-          text: '#FFFFFF',
+          text: '#EDEDED',
           primary: '#0070f3',
         },
         primary: '#0070f3',
