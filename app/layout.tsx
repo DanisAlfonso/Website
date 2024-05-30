@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-gray-100 dark:bg-dark-background text-gray-900 dark:text-dark-text flex flex-col">
-        <header className="fixed top-0 left-0 right-0 backdrop-blur-lg shadow-md z-50 bg-opacity-50 dark:bg-opacity-50 bg-white dark:bg-dark-surface">
+        <header className="fixed top-0 left-0 right-0 backdrop-blur-lg shadow-md z-50 bg-opacity-50 dark:bg-opacity-50 bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold">
               DNR
@@ -76,7 +76,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main className="container mx-auto px-4 py-8 flex-grow mt-16">
+        <main className="container mx-auto px-4 py-8 flex-grow mt-20 md:mt-24">
           {children}
         </main>
         <footer className="p-4 text-center bg-gray-200 dark:bg-dark-surface mt-auto">
