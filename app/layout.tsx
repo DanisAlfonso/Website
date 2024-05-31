@@ -37,6 +37,10 @@ export default function RootLayout({
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
+
   return (
     <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-gray-100 dark:bg-dark-background text-gray-900 dark:text-dark-text flex flex-col">
@@ -45,7 +49,7 @@ export default function RootLayout({
             <Link href="/" className="text-2xl font-bold">
               DNR
             </Link>
-            <nav className="flex space-x-4">
+            <nav className="flex space-x-4 items-center">
               {[
                 { name: 'Projects', href: '/projects' },
                 { name: 'Music', href: '/music' },
@@ -64,7 +68,7 @@ export default function RootLayout({
                 </Link>
               ))}
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={toggleTheme}
                 className="ml-4 p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors"
                 title={`Toggle to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               >
@@ -89,6 +93,9 @@ export default function RootLayout({
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaTwitter className="h-6 w-6" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaLinkedin className="h-6 w-6" />
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaGithub className="h-6 w-6" />
