@@ -31,7 +31,7 @@ header, footer {
 
 button {
   background-color: var(--surface-color);
-  color: var (--text-color);
+  color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   border: none;
   padding: 0.5rem 1rem;
