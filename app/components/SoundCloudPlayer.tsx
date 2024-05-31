@@ -1,3 +1,4 @@
+// app/components/SoundCloundPlayer.tsx
 import React from 'react';
 
 interface SoundCloudPlayerProps {
@@ -18,4 +19,3 @@ const SoundCloudPlayer: React.FC<SoundCloudPlayerProps> = ({ url }) => {
 };
 
 export default SoundCloudPlayer;
-

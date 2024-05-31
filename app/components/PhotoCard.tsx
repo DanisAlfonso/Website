@@ -1,3 +1,4 @@
+// app/components/PhotoCard.tsx
 "use client";
 
 interface PhotoCardProps {

@@ -1,3 +1,4 @@
+// app/blog/[id]/page.tsx
 import { getBlogPost, getBlogPosts } from '../../lib/blog';
 import { notFound } from 'next/navigation';
 

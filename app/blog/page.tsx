@@ -1,3 +1,4 @@
+// app/blog/page.tsx
 import BlogPost from '../components/BlogPost';
 import { getBlogPosts } from '../lib/blog';
 

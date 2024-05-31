@@ -1,3 +1,4 @@
+// app/components/MusicalScore.tsx
 import React from 'react';
 
 interface MusicalScoreProps {
