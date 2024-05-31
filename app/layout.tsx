@@ -53,7 +53,7 @@ export default function RootLayout({
               {[
                 { name: 'Projects', href: '/projects' },
                 { name: 'Music', href: '/music' },
-                { name: 'Architecture', href: '/architecture' },
+               // { name: 'Architecture', href: '/architecture' },
                 { name: 'Photography', href: '/photography' },
                 { name: 'Blog', href: '/blog' },
               ].map((item) => (
