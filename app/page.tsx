@@ -1,3 +1,7 @@
+"use client";
+
+import React from 'react';
+
 export default function HomePage({ currentSection }) {
   return (
     <div className="space-y-12">
@@ -15,12 +19,13 @@ export default function HomePage({ currentSection }) {
         </section>
       )}
 
-      //{currentSection === 'architecture' && (
-      //  <section className="p-6 bg-white dark:bg-dark-surface rounded-lg shadow-md">
-      //    <h2 className="text-3xl font-bold mb-4">Architecture</h2>
-      //    <p className="text-lg text-gray-700 dark:text-dark-text">Details about architecture projects...</p>
-      //  </section>
-      //)}
+      {/* Uncomment the following section if you want to include architecture */}
+      {/* {currentSection === 'architecture' && (
+        <section className="p-6 bg-white dark:bg-dark-surface rounded-lg shadow-md">
+          <h2 className="text-3xl font-bold mb-4">Architecture</h2>
+          <p className="text-lg text-gray-700 dark:text-dark-text">Details about architecture projects...</p>
+        </section>
+      )} */}
 
       {currentSection === 'photography' && (
         <section className="p-6 bg-white dark:bg-dark-surface rounded-lg shadow-md">
@@ -38,5 +43,4 @@ export default function HomePage({ currentSection }) {
     </div>
   );
 }
-
 
