@@ -1,3 +1,4 @@
+/* app/layout.tsx */
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -53,16 +54,14 @@ export default function RootLayout({
               {[
                 { name: 'Projects', href: '/projects' },
                 { name: 'Music', href: '/music' },
-               // { name: 'Architecture', href: '/architecture' },
                 { name: 'Photography', href: '/photography' },
                 { name: 'Blog', href: '/blog' },
               ].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-lg font-medium hover:text-primary transition-colors ${
-                    pathname === item.href ? 'text-primary' : 'text-gray-700 dark:text-gray-300'
-                  }`}
+                  className={`text-lg font-medium hover:text-primary transition-colors ${pathname === item.href ? 'text-primary' : 'text-gray-700 dark:text-gray-300'
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -84,7 +83,7 @@ export default function RootLayout({
         <main className="container mx-auto px-4 py-8 flex-grow mt-20 md:mt-24">
           {children}
         </main>
-        <footer className="bg-gray-200 dark:bg-dark-surface py-8 mt-auto">
+        <footer className="bg-gray-200 dark:bg-dark-surface py-8 mt-auto border-t border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <p className="text-center text-gray-700 dark:text-gray-300">© 2024 DNR. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">

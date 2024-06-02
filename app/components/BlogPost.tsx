@@ -12,7 +12,7 @@ interface BlogPostProps {
 
 const BlogPost: React.FC<BlogPostProps> = ({ id, title, date, excerpt }) => {
   return (
-    <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+    <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg blog-post">
       <h3 className="text-2xl font-semibold mb-2">
         <Link href={`/blog/${id}`} className="text-primary hover:underline">
           {title}
