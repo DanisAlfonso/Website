@@ -30,6 +30,20 @@ const projects = {
       description: 'NumLib is a C++ project aimed at providing a toolkit for numeric computation.',
     },
   ],
+  'Text Editor (Emacs and Neovim)': [
+    {
+      username: 'DanisAlfonso',
+      repository: '.emacs.d',
+      description: 'my personal Emacs configuration files',
+
+    },
+    {
+      username: 'DanisAlfonso',
+      repository: 'Neovim',
+      description: 'my personal Neovim configuration files',
+
+    },
+  ],
 };
 
 export default function ProjectsPage() {
