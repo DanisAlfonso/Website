@@ -1,7 +1,9 @@
 // app/components/ProjectCard.tsx
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { FaStar, FaCodeBranch } from 'react-icons/fa';
 
 interface ProjectCardProps {
   username: string;
@@ -13,6 +15,9 @@ interface Project {
   name: string;
   description: string;
   html_url: string;
+  stargazers_count: number;
+  forks_count: number;
+  updated_at: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository, description }) => {
@@ -40,25 +45,54 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository, descrip
   }, [username, repository]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+        <div className="animate-pulse">
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2 mb-2"></div>
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+        <div className="text-red-500">Error: {error}</div>
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-4 p-2 bg-red-500 text-white rounded hover:bg-red-600"
+        >
+          Retry
+        </button>
+      </div>
+    );
   }
 
   if (!project) {
-    return <div>No project found.</div>;
+    return (
+      <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+        <div>No project found.</div>
+      </div>
+    );
   }
 
   return (
-    <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md hover:border-primary dark:hover:border-primary transition-all duration-200 ease-in-out hover:shadow-lg dark:hover:shadow-lg dark:hover:shadow-[0_4px_6px_-1px_rgba(0,112,243,0.1),0_2px_4px_-1px_rgba(0,112,243,0.06)]">
-      <h3 className="text-2xl font-semibold">
-        <a href={project.html_url} target="_blank" rel="noopener noreferrer">
+    <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md hover:border-primary dark:hover:border-primary transition-all duration-200 ease-in-out hover:shadow-lg dark:hover:shadow-lg">
+      <h3 className="text-2xl font-semibold mb-2">
+        <a href={project.html_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           {project.name}
         </a>
       </h3>
-      <p>{description}</p>
+      <p className="mb-2">{description}</p>
+      <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+        <div className="flex items-center">
+          <FaStar className="mr-1" /> {project.stargazers_count}
+          <FaCodeBranch className="ml-4 mr-1" /> {project.forks_count}
+        </div>
+        <div>Last updated: {new Date(project.updated_at).toLocaleDateString()}</div>
+      </div>
     </div>
   );
 };
