@@ -13,7 +13,7 @@ html.dark {
   --bg-color: theme('colors.dark.background');
   --surface-color: theme('colors.dark.surface');
   --text-color: theme('colors.dark.text');
-  --primary-color: theme('colors.primary');
+  --primary-color: #1a73e8; /* Updated primary color to a modern blue */
   --border-color: theme('colors.gray.700');
 }
 
@@ -21,7 +21,7 @@ html.light {
   --bg-color: theme('colors.light.background');
   --surface-color: theme('colors.light.surface');
   --text-color: theme('colors.light.text');
-  --primary-color: theme('colors.primary');
+  --primary-color: #1a73e8; /* Updated primary color to a modern blue */
   --border-color: theme('colors.gray.300');
 }
 

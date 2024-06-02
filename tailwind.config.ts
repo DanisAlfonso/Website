@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#00796B',
+        primary: '#1a73e8', // Updated primary color to a modern blue
         dark: {
           background: '#121212',
           surface: '#1D1D1D',
