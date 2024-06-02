@@ -1,21 +1,24 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.ts
 module.exports = {
   darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
+        primary: '#00796B',
         dark: {
-          background: '#000000',
-          surface: '#111111',
-          text: '#EDEDED',
-          primary: '#0070f3',
+          background: '#121212',
+          surface: '#1D1D1D',
+          text: '#E4E4E4',
         },
-        primary: '#0070f3',
+        light: {
+          background: '#FFFFFF',
+          surface: '#F3F4F6',
+          text: '#1F2937',
+        },
       },
     },
   },

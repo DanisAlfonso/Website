@@ -1,13 +1,14 @@
-/* app/layout.tsx */
+// app/layout.tsx
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
+import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import useTheme from './hooks/useTheme';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,30 +17,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState('light');
+  const { theme, setTheme } = useTheme();
   const pathname = usePathname();
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-    }
-  }, []);
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
   };
 
   return (
@@ -66,17 +48,29 @@ export default function RootLayout({
                   {item.name}
                 </Link>
               ))}
-              <button
-                onClick={toggleTheme}
-                className="ml-4 p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors"
-                title={`Toggle to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-              >
-                {theme === 'dark' ? (
-                  <SunIcon className="h-6 w-6 text-yellow-500" />
-                ) : (
-                  <MoonIcon className="h-6 w-6 text-blue-500" />
-                )}
-              </button>
+              <div className="ml-4 flex items-center space-x-2 bg-gray-100 dark:bg-dark-surface p-1 rounded-full theme-switcher">
+                <button
+                  onClick={() => handleThemeChange('light')}
+                  className={`p-2 rounded-full ${theme === 'light' ? 'active' : ''}`}
+                  title="Light mode"
+                >
+                  <SunIcon className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={() => handleThemeChange('dark')}
+                  className={`p-2 rounded-full ${theme === 'dark' ? 'active' : ''}`}
+                  title="Dark mode"
+                >
+                  <MoonIcon className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={() => handleThemeChange('system')}
+                  className={`p-2 rounded-full ${theme === 'system' ? 'active' : ''}`}
+                  title="System mode"
+                >
+                  <ComputerDesktopIcon className="h-6 w-6" />
+                </button>
+              </div>
             </nav>
           </div>
         </header>
