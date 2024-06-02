@@ -5,13 +5,20 @@ import PhotoCard from '../components/PhotoCard';
 import Modal from '../components/Modal';
 
 const photoCategories = {
-  "Nature": [
+  "Nature (my birthplace, Honduras)": [
     { src: '/photos/MontR.jpg', alt: 'Photo 2', caption: 'The mountain' },
     { src: '/photos/Weinberg.jpg', alt: 'Photo 3', caption: 'On the way to the waterfall' },
     { src: '/photos/dorf.jpg', alt: 'Photo 4', caption: 'On the way to the waterfall' },
     { src: '/photos/sm.jpeg', alt: 'Photo 5', caption: 'It has rained in the village' },
-
   ],
+  "Costa Rica": [
+    { src: '/photos/cr1.jpeg', alt: 'Photo 1', caption: 'Corcovado National Park' },
+    { src: '/photos/cr2.jpeg', alt: 'Photo 2', caption: 'Corcovado National Park' },
+    { src: '/photos/cr0.jpg', alt: 'Photo 3', caption: 'Corcovado National Park' },
+    { src: '/photos/cr5.jpeg', alt: 'Photo 4', caption: 'Corcovado National Park' },
+    { src: '/photos/cr6.jpeg', alt: 'Photo 5', caption: 'Corcovado National Park' },
+  ],
+
   "Something Delicious to Eat or Drink": [
     { src: '/photos/cafe1.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
     { src: '/photos/cafe2.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
@@ -19,13 +26,13 @@ const photoCategories = {
     { src: '/photos/Torrejas.jpg', alt: 'Photo 6', caption: 'What a delight' },
     { src: '/photos/CafeT.jpg', alt: 'Photo 6', caption: 'Roasting coffee' },
     { src: '/photos/beer1.jpg', alt: 'Photo 7', caption: 'Beer in Bavaria' },
-    { src: '/photos/beer2.jpg', alt: 'Photo 8', caption: 'Beer in Bavaria'},
+    { src: '/photos/beer2.jpg', alt: 'Photo 8', caption: 'Beer in Bavaria' },
+    { src: '/photos/beer3.jpg', alt: 'Photo 8', caption: 'Beer in Bavaria' },
+    { src: '/photos/Kuchen.jpg', alt: 'Photo 8', caption: 'Cake in Bavaria' },
     { src: '/photos/tortilla.jpg', alt: 'Photo 9', caption: 'I have prepared a Spanish omelette' },
-    { src: '/photos/papas.jpg', alt: 'Photo 10', caption: 'I made myself some fries'},
-
-
+    { src: '/photos/papas.jpg', alt: 'Photo 10', caption: 'I made myself some fries' },
   ],
-          "Germany": [
+  "Germany": [
     { src: '/photos/Mannheim.jpg', alt: 'Photo 1', caption: 'First city I visited in Germany, Mannheim' },
     { src: '/photos/Kaffee.jpg', alt: 'Photo 1', caption: 'Visiting a cafe on my first day in Germany' },
     { src: '/photos/winter1.jpg', alt: 'Photo 1', caption: 'Winter in Stolzenroth' },
@@ -37,12 +44,10 @@ const photoCategories = {
     { src: '/photos/winter7.jpg', alt: 'Photo 6', caption: 'Winter in Stolzenroth' },
     { src: '/photos/Stolzenroth.jpg', alt: 'Photo 6', caption: 'Spring in Stolzenroth' },
     { src: '/photos/Baum.jpeg', alt: 'Photo 6', caption: 'Spring in Stolzenroth' },
-
     { src: '/photos/car.jpg', alt: 'Photo 6', caption: 'While walking aimlessly through the streets of Bamberg' },
     { src: '/photos/car2.jpg', alt: 'Photo 6', caption: 'While walking aimlessly through the streets of Bamberg' },
-
   ],
-        "Spain 2020": [
+  "Spain 2020": [
     { src: '/photos/B1.jpg', alt: 'Photo 1', caption: 'Montserrat' },
     { src: '/photos/B2.jpg', alt: 'Photo 2', caption: 'Montserrat' },
     { src: '/photos/B3.jpg', alt: 'Photo 3', caption: 'Montserrat' },
@@ -52,7 +57,7 @@ const photoCategories = {
     { src: '/photos/B7.jpg', alt: 'Photo 7', caption: 'Montserrat' },
   ],
 
-      "Hause Graden": [
+  "Hause Graden": [
     { src: '/photos/garden1.jpg', alt: 'Photo 1', caption: 'This is the garden of the house' },
     { src: '/photos/garden2.jpg', alt: 'Photo 2', caption: 'This is the garden of the house' },
     { src: '/photos/garden3.jpg', alt: 'Photo 3', caption: 'This is the garden of the house' },
@@ -68,8 +73,7 @@ const photoCategories = {
     { src: '/photos/Gato.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
 
   ],
-
-        "Me in my Good Old Fitness Days": [
+  "Me in my Good Old Fitness Days": [
     { src: '/photos/fitness1.jpg', alt: 'Photo 1', caption: 'Me somewhere between 2015 and 2018' },
     { src: '/photos/fitness2.jpg', alt: 'Photo 2', caption: 'Me somewhere between 2015 and 2018' },
     { src: '/photos/fitness3.jpg', alt: 'Photo 3', caption: 'Me somewhere between 2015 and 2018' },
@@ -77,11 +81,13 @@ const photoCategories = {
     { src: '/photos/hat.jpg', alt: 'Photo 5', caption: 'Me somewhere between 2015 and 2018' },
   ],
 
-      "College Graduation": [
+  "College Graduation": [
     { src: '/photos/U-FM.jpg', alt: 'Photo 1', caption: 'Graduation of the degree in physics at UNAH (2013)' },
     { src: '/photos/U-FS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
+    { src: '/photos/USisterS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
+
   ],
-        "The Good Old Days": [
+  "The Good Old Days": [
     { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'High school graduation (2007)' },
     { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: 'High school graduation (2007)' },
   ],
