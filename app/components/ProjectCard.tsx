@@ -79,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository, descrip
   }
 
   return (
-    <div className="p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md hover:border-primary dark:hover:border-primary transition-all duration-200 ease-in-out hover:shadow-lg dark:hover:shadow-lg">
+    <div className="project-card p-6 bg-white dark:bg-dark-surface border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition-all duration-200 ease-in-out">
       <h3 className="text-2xl font-semibold mb-2">
         <a href={project.html_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           {project.name}
