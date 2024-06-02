@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1a73e8', // Updated primary color to a modern blue
+        primary: '#1a73e8',
         dark: {
-          background: '#121212',
-          surface: '#1D1D1D',
-          text: '#E4E4E4',
+          background: '#0b0b0b',
+          surface: '#1a1a1a',
+          text: '#e4e4e4',
         },
         light: {
-          background: '#FFFFFF',
-          surface: '#F3F4F6',
-          text: '#1F2937',
+          background: '#ffffff',
+          surface: '#f3f4f6',
+          text: '#1f2937',
         },
       },
     },
