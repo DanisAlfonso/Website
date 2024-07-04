@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "next": "14.2.3",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1"
