@@ -1,11 +1,11 @@
-// app/layout.tsx
 "use client";
 
 import React from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6'; // Import the FaXTwitter icon
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import useTheme from './hooks/useTheme';
@@ -84,13 +84,10 @@ export default function RootLayout({
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaFacebook className="h-6 w-6" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                <FaTwitter className="h-6 w-6" />
+              <a href="https://x.com/AlfonsoDanis" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaXTwitter className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                <FaLinkedin className="h-6 w-6" />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+              <a href="https://github.com/DanisAlfonso" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaGithub className="h-6 w-6" />
               </a>
             </div>
@@ -100,4 +97,3 @@ export default function RootLayout({
     </html>
   );
 }
-

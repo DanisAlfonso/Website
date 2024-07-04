@@ -51,7 +51,7 @@ export default function HomePage({ currentSection }) {
   return (
     <div className="space-y-12">
       <section className="hero-section p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold mb-4 text-center">Welcome to My Website</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center">Welcome to DNR</h1>
         <p className="text-lg text-center">
           My name is Danis Ramírez. I was born in 1989 and have always had a deep interest in philosophical musings, history, and science.
         </p>
