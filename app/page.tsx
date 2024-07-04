@@ -49,7 +49,7 @@ export default function HomePage({ currentSection }) {
   };
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 mt-24 md:mt-12"> {/* Adjusted margin-top */}
       <section className="hero-section p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-md">
         <h1 className="text-4xl font-bold mb-4 text-center">Welcome to DNR</h1>
         <p className="text-lg text-center">
