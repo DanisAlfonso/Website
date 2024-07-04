@@ -44,6 +44,7 @@ export default function RootLayout({
                   { name: 'Music', href: '/music' },
                   { name: 'Photography', href: '/photography' },
                   { name: 'Blog', href: '/blog' },
+                  { name: 'About', href: '/about' },  // Moved About link here
                   { name: 'Contact', href: '/contact' },
                 ].map((item) => (
                   <Link
@@ -95,6 +96,7 @@ export default function RootLayout({
                   { name: 'Music', href: '/music' },
                   { name: 'Photography', href: '/photography' },
                   { name: 'Blog', href: '/blog' },
+                  { name: 'About', href: '/about' },  // Moved About link here
                   { name: 'Contact', href: '/contact' },
                 ].map((item) => (
                   <Link
