@@ -4,7 +4,7 @@ import React from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
-import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6'; // Import the FaXTwitter icon
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -82,17 +82,14 @@ export default function RootLayout({
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <p className="text-center text-gray-700 dark:text-gray-300">© 2024 DNR. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                <FaFacebook className="h-6 w-6" />
+            <a href="https://github.com/DanisAlfonso" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaGithub className="h-6 w-6" />
               </a>
               <a href="https://x.com/AlfonsoDanis" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaXTwitter className="h-6 w-6" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                <FaLinkedin className="h-6 w-6" />
-              </a>
-              <a href="https://github.com/DanisAlfonso" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                <FaGithub className="h-6 w-6" />
+              </a> 
+              <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaInstagram className="h-6 w-6" />
               </a>
             </div>
           </div>

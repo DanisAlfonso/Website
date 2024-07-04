@@ -7,12 +7,12 @@ import Link from 'next/link';
 const projects = [
   {
     title: 'Gym Tracker',
-    description: 'A comprehensive gym tracking app to monitor workouts, progress, and more.',
+    description: 'MuscleMetrics is a fitness tracking application developed using Flutter, designed to assist users in managing their workout routines and tracking exercise performance. Key features include multilingual support (English, Spanish, French, German), customizable workout routines, exercise performance tracking, and visual progress overviews.',
     githubUrl: 'https://github.com/DanisAlfonso/gym_tracker',
   },
   {
     title: 'NeoNotes',
-    description: 'A modern flashcard and note-taking application with rich text editing and organization features.',
+    description: 'NeoNotes is a  application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency.',
     githubUrl: 'https://github.com/DanisAlfonso/NeoNotes',
   },
 ];
