@@ -10,17 +10,17 @@ const projects = {
     {
       username: 'DanisAlfonso',
       repository: 'MuscleMetrics',
-      description: 'A comprehensive gym tracking app to monitor workouts, progress, and more.',
+      description: 'MuscleMetrics is a fitness tracking application developed using Flutter, designed to assist users in managing their workout routines and tracking exercise performance. Key features include multilingual support (English, Spanish, French, German), customizable workout routines, exercise performance tracking, and visual progress overviews. The app ensures data persistence through shared preferences, providing a seamless and personalized fitness tracking experience across devices.',
     },
     {
       username: 'DanisAlfonso',
       repository: 'NeoNotes',
-      description: 'A modern flashcard and note-taking application with rich text editing and organization features.',
+      description: 'NeoNotes is a  application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency. With a sleek UI crafted in SwiftUI and customizable components, NeoNotes ensures an optimized user experience on all Apple devices, making it a powerful tool for structured learning.',
     },
     {
       username: 'DanisAlfonso',
       repository: 'Website',
-      description: 'A web development project description.',
+      description: 'This is a dynamic and responsive website built using Next.js, optimized with custom Google Fonts, and structured with TypeScript. It emphasizes modern web development practices, ensuring fast performance and seamless user experience.',
     },
   ],
   'C++': [
@@ -41,7 +41,7 @@ const projects = {
     {
       username: 'DanisAlfonso',
       repository: '.emacs.d',
-      description: 'This Emacs configuration is designed to enhance the Emacs experience with various customizations and plugins aimed at improving productivity and functionality. It includes settings for key bindings, interface improvements, programming support, and more.',
+      description: 'This Emacs configuration is designed to enhance the Emacs experience with various customizations and packages aimed at improving productivity and functionality. It includes settings for key bindings, interface improvements, programming support, and more.',
 
     },
     {

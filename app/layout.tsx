@@ -38,6 +38,7 @@ export default function RootLayout({
                 { name: 'Music', href: '/music' },
                 { name: 'Photography', href: '/photography' },
                 { name: 'Blog', href: '/blog' },
+                { name: 'Contact', href: '/contact' }, // Add Contact link
               ].map((item) => (
                 <Link
                   key={item.name}
@@ -86,6 +87,9 @@ export default function RootLayout({
               </a>
               <a href="https://x.com/AlfonsoDanis" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaXTwitter className="h-6 w-6" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                <FaLinkedin className="h-6 w-6" />
               </a>
               <a href="https://github.com/DanisAlfonso" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 <FaGithub className="h-6 w-6" />
