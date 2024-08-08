@@ -10,12 +10,12 @@ const projects = {
     {
       username: 'DanisAlfonso',
       repository: 'MuscleMetrics',
-      description: 'MuscleMetrics is a fitness tracking application developed using Flutter, designed to assist users in managing their workout routines and tracking exercise performance. Key features include multilingual support (English, Spanish, French, German), customizable workout routines, exercise performance tracking, and visual progress overviews. The app ensures data persistence through shared preferences, providing a seamless and personalized fitness tracking experience across devices.',
+      description: 'MuscleMetrics is a fitness tracking application developed using Flutter, designed to assist users in managing their workout routines and tracking exercise performance. Key features include multilingual support (English, Spanish, French, German), customizable workout routines, exercise performance tracking, and visual progress overviews.',
     },
     {
       username: 'DanisAlfonso',
       repository: 'NeoNotes',
-      description: 'NeoNotes is a  application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency. With a sleek UI crafted in SwiftUI and customizable components, NeoNotes ensures an optimized user experience on all Apple devices, making it a powerful tool for structured learning.',
+      description: 'NeoNotes is a  application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency.',
     },
     {
       username: 'DanisAlfonso',
