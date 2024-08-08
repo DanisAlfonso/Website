@@ -4,7 +4,17 @@ import React, { useState } from 'react';
 import PhotoCard from '../components/PhotoCard';
 import Modal from '../components/Modal';
 
-const photoCategories = {
+interface Photo {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+interface PhotoCategory {
+  [category: string]: Photo[];
+}
+
+const photoCategories: PhotoCategory = {
   "Nature (my birthplace, Honduras)": [
     { src: '/photos/MontR.jpg', alt: 'Photo 2', caption: 'The mountain' },
     { src: '/photos/Weinberg.jpg', alt: 'Photo 3', caption: 'On the way to the waterfall' },
@@ -18,7 +28,6 @@ const photoCategories = {
     { src: '/photos/cr5.jpeg', alt: 'Photo 4', caption: 'Corcovado National Park' },
     { src: '/photos/cr6.jpeg', alt: 'Photo 5', caption: 'Corcovado National Park' },
   ],
-
   "Something Delicious to Eat or Drink": [
     { src: '/photos/cafe1.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
     { src: '/photos/cafe2.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
@@ -56,7 +65,6 @@ const photoCategories = {
     { src: '/photos/B6.jpg', alt: 'Photo 6', caption: 'Montserrat' },
     { src: '/photos/B7.jpg', alt: 'Photo 7', caption: 'Montserrat' },
   ],
-
   "Hause Graden": [
     { src: '/photos/garden1.jpg', alt: 'Photo 1', caption: 'This is the garden of the house' },
     { src: '/photos/garden2.jpg', alt: 'Photo 2', caption: 'This is the garden of the house' },
@@ -67,11 +75,9 @@ const photoCategories = {
     { src: '/photos/garden7.jpg', alt: 'Photo 7', caption: 'This is the garden of the house' },
     { src: '/photos/garden8.jpg', alt: 'Photo 8', caption: 'This is the garden of the house' },
     { src: '/photos/home.jpg', alt: 'Photo 8', caption: 'This is the garden of the house' },
-
     { src: '/photos/Casa Jardin 2.jpg', alt: 'Photo 1', caption: 'My second stone wall' },
     { src: '/photos/sol1.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
     { src: '/photos/Gato.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
-
   ],
   "Me in my Good Old Fitness Days": [
     { src: '/photos/fitness1.jpg', alt: 'Photo 1', caption: 'Me somewhere between 2015 and 2018' },
@@ -80,27 +86,22 @@ const photoCategories = {
     { src: '/photos/fitness4.jpg', alt: 'Photo 4', caption: 'Me somewhere between 2015 and 2018' },
     { src: '/photos/hat.jpg', alt: 'Photo 5', caption: 'Me somewhere between 2015 and 2018' },
   ],
-
   "College Graduation": [
     { src: '/photos/U-FM.jpg', alt: 'Photo 1', caption: 'Graduation of the degree in physics at UNAH (2013)' },
     { src: '/photos/U-FS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
     { src: '/photos/USisterS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
-
   ],
   "The Good Old Days": [
     { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'High school graduation (2007)' },
     { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: 'High school graduation (2007)' },
   ],
-
-
-
 };
 
 export default function PhotographyPage() {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [currentPhotos, setCurrentPhotos] = useState<{ src: string; alt: string; caption: string }[]>([]);
+  const [currentPhotos, setCurrentPhotos] = useState<Photo[]>([]);
 
-  const handlePhotoClick = (index: number, category: string) => {
+  const handlePhotoClick = (index: number, category: keyof PhotoCategory) => {
     setCurrentPhotos(photoCategories[category]);
     setSelectedPhotoIndex(index);
   };

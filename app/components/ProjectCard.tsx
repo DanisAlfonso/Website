@@ -1,5 +1,3 @@
-// app/components/ProjectCard.tsx
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -34,8 +32,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ username, repository, descrip
         }
         const data = await response.json();
         setProject(data);
-      } catch (error) {
-        setError(error.message);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       } finally {
         setLoading(false);
       }

@@ -9,7 +9,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -24,7 +24,7 @@ export default function ContactPage() {
     return !Object.values(newErrors).some(Boolean);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       try {
@@ -41,8 +41,12 @@ export default function ContactPage() {
         } else {
           throw new Error('Failed to send message');
         }
-      } catch (error) {
-        setError(error.message);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       }
     }
   };
@@ -52,11 +56,11 @@ export default function ContactPage() {
       <section className="p-6 bg-white dark:bg-dark-surface rounded-lg shadow-md border border-gray-300 dark:border-gray-700 hover:shadow-lg transition-shadow">
         <h1 className="text-4xl font-bold mb-4 text-center text-gray-900 dark:text-gray-100">Get in Touch</h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 text-center">
-          I'd love to hear from you! Whether you have a question about my work, a project idea, or just want to say hi, feel free to get in touch.
+          I&apos;d love to hear from you! Whether you have a question about my work, a project idea, or just want to say hi, feel free to get in touch.
         </p>
         {submitted ? (
           <div className="mt-4 text-center text-green-600 dark:text-green-400">
-            Thank you for your message! I'll get back to you soon.
+            Thank you for your message! I&apos;ll get back to you soon.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-4 space-y-4">
@@ -120,3 +124,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

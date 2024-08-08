@@ -7,7 +7,15 @@ const markdown = new MarkdownIt();
 
 const contentDirectory = path.join(process.cwd(), 'app/content');
 
-export function getBlogPosts() {
+interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  contentHtml: string;
+  excerpt: string;
+}
+
+export function getBlogPosts(): BlogPost[] {
   const fileNames = fs.readdirSync(contentDirectory);
   const allPosts = fileNames.map(fileName => {
     const fullPath = path.join(contentDirectory, fileName);
@@ -19,15 +27,16 @@ export function getBlogPosts() {
 
     return {
       id: fileName.replace(/\.md$/, ''),
-      ...matterResult.data,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
       contentHtml,
       excerpt,
-    };
+    } as BlogPost;
   });
   return allPosts;
 }
 
-export function getBlogPost(id: string) {
+export function getBlogPost(id: string): BlogPost | undefined {
   const fullPath = path.join(contentDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -36,8 +45,10 @@ export function getBlogPost(id: string) {
 
   return {
     id,
-    ...matterResult.data,
+    title: matterResult.data.title,
+    date: matterResult.data.date,
     contentHtml,
-  };
+    excerpt: matterResult.content.split('\n').slice(0, 3).join(' '),
+  } as BlogPost;
 }
 

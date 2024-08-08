@@ -1,6 +1,13 @@
-// app/blog/[id]/page.tsx
 import { getBlogPost, getBlogPosts } from '../../lib/blog';
 import { notFound } from 'next/navigation';
+
+interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  contentHtml: string;
+  excerpt: string;
+}
 
 interface BlogPostPageProps {
   params: {
@@ -9,10 +16,11 @@ interface BlogPostPageProps {
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.id);
+  const post: BlogPost | undefined = getBlogPost(params.id);
 
   if (!post) {
     notFound();
+    return null;
   }
 
   return (

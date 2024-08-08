@@ -4,7 +4,20 @@ import React, { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  githubUrl: string;
+}
+
+interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Gym Tracker',
     description: 'MuscleMetrics is a fitness tracking application developed using Flutter, designed to assist users in managing their workout routines and tracking exercise performance. Key features include multilingual support (English, Spanish, French, German), customizable workout routines, exercise performance tracking, and visual progress overviews.',
@@ -12,21 +25,21 @@ const projects = [
   },
   {
     title: 'NeoNotes',
-    description: 'NeoNotes is a  application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency.',
+    description: 'NeoNotes is a application designed for iOS and macOS. It features seamless cross-platform compatibility, flashcard management, and intuitive study tools. The app leverages spaced repetition algorithms, CoreData for data persistence, and detailed data analytics to enhance learning efficiency.',
     githubUrl: 'https://github.com/DanisAlfonso/NeoNotes',
   },
 ];
 
-export default function HomePage({ currentSection }) {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [blogPosts, setBlogPosts] = useState([]);
+export default function HomePage() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
     async function fetchBlogPosts() {
       try {
         const response = await fetch('/api/blog/posts');
         if (response.ok) {
-          const posts = await response.json();
+          const posts: BlogPost[] = await response.json();
           console.log('Fetched blog posts:', posts); // Debugging log
           setBlogPosts(posts.slice(0, 2)); // Get the latest 2 blog posts
         } else {
@@ -40,7 +53,7 @@ export default function HomePage({ currentSection }) {
     fetchBlogPosts();
   }, []);
 
-  const handleProjectClick = (project) => {
+  const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
   };
 
@@ -128,3 +141,4 @@ export default function HomePage({ currentSection }) {
     </div>
   );
 }
+
