@@ -79,7 +79,7 @@ const photoCategories: PhotoCategory = {
     { src: '/photos/sol1.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
     { src: '/photos/Gato.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
   ],
-  "Me in my Good Old Fitness Days": [
+  "Me in my Good Old Fitness Days 😜": [
     { src: '/photos/fitness1.jpg', alt: 'Photo 1', caption: 'Me somewhere between 2015 and 2018' },
     { src: '/photos/fitness2.jpg', alt: 'Photo 2', caption: 'Me somewhere between 2015 and 2018' },
     { src: '/photos/fitness3.jpg', alt: 'Photo 3', caption: 'Me somewhere between 2015 and 2018' },
