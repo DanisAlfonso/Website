@@ -91,9 +91,9 @@ const photoCategories: PhotoCategory = {
     { src: '/photos/U-FS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
     { src: '/photos/USisterS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
   ],
-  "The Good Old Days": [
-    { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'High school graduation (2007)' },
-    { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: 'High school graduation (2007)' },
+  "High School Graduation": [
+    { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'I remember that I hated high school 🧐' },
+    { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: '🙂' },
   ],
 };
 
