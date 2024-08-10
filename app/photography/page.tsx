@@ -17,7 +17,6 @@ interface PhotoCategory {
 const photoCategories: PhotoCategory = {
   "Nature (my birthplace, Honduras)": [
     { src: '/photos/MontR.jpg', alt: 'Photo 2', caption: 'The mountain' },
-    { src: '/photos/Weinberg.jpg', alt: 'Photo 3', caption: 'On the way to the waterfall' },
     { src: '/photos/dorf.jpg', alt: 'Photo 4', caption: 'On the way to the waterfall' },
     { src: '/photos/sm.jpeg', alt: 'Photo 5', caption: 'It has rained in the village' },
   ],
