@@ -31,7 +31,7 @@ const photoCategories: PhotoCategory = {
   "Something Delicious to Eat or Drink": [
     { src: '/photos/cafe1.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
     { src: '/photos/cafe2.jpg', alt: 'Photo 4', caption: 'For my enjoyment' },
-    { src: '/photos/miel.jpg', alt: 'Photo 5', caption: 'What a delight' },
+    { src: '/photos/Miel.jpg', alt: 'Photo 5', caption: 'What a delight' },
     { src: '/photos/Torrejas.jpg', alt: 'Photo 6', caption: 'What a delight' },
     { src: '/photos/CafeT.jpg', alt: 'Photo 6', caption: 'Roasting coffee' },
     { src: '/photos/beer1.jpg', alt: 'Photo 7', caption: 'Beer in Bavaria' },
