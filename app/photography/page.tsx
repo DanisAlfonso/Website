@@ -70,7 +70,7 @@ const photoCategories: PhotoCategory = {
     { src: '/photos/garden3.jpg', alt: 'Photo 3', caption: 'This is the garden of the house' },
     { src: '/photos/garden4.jpg', alt: 'Photo 4', caption: 'This is the garden of the house' },
     { src: '/photos/garden5.jpg', alt: 'Photo 5', caption: 'This is the garden of the house' },
-    { src: '/photos/garden6.jpg', alt: 'Photo 6', caption: 'This is the garden of the house' },
+    { src: '/photos/garden6.jpg', alt: 'Photo 6', caption: 'Just me doing my thing' },
     { src: '/photos/garden7.jpg', alt: 'Photo 7', caption: 'This is the garden of the house' },
     { src: '/photos/garden8.jpg', alt: 'Photo 8', caption: 'This is the garden of the house' },
     { src: '/photos/home.jpg', alt: 'Photo 8', caption: 'This is the garden of the house' },
@@ -79,20 +79,20 @@ const photoCategories: PhotoCategory = {
     { src: '/photos/Gato.jpg', alt: 'Photo 8', caption: "The cat thinking about life's difficulties" },
   ],
   "Me in my Good Old Fitness Days 😜": [
-    { src: '/photos/fitness1.jpg', alt: 'Photo 1', caption: 'Me somewhere between 2015 and 2018' },
-    { src: '/photos/fitness2.jpg', alt: 'Photo 2', caption: 'Me somewhere between 2015 and 2018' },
+    { src: '/photos/fitness1.jpg', alt: 'Photo 1', caption: 'Here I am, trying my best to look sexy 😜, 2018' },
+    { src: '/photos/fitness2.jpg', alt: 'Photo 2', caption: 'Back in my long hair days 😋' },
     { src: '/photos/fitness3.jpg', alt: 'Photo 3', caption: 'Me somewhere between 2015 and 2018' },
-    { src: '/photos/fitness4.jpg', alt: 'Photo 4', caption: 'Me somewhere between 2015 and 2018' },
+    { src: '/photos/fitness4.jpg', alt: 'Photo 4', caption: '💪🏼' },
     { src: '/photos/hat.jpg', alt: 'Photo 5', caption: 'Me somewhere between 2015 and 2018' },
   ],
   "College Graduation": [
-    { src: '/photos/U-FM.jpg', alt: 'Photo 1', caption: 'Graduation of the degree in physics at UNAH (2013)' },
-    { src: '/photos/U-FS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
-    { src: '/photos/USisterS.jpg', alt: 'Photo 2', caption: 'Graduation of the degree in physics at UNAH (2013)' },
+    { src: '/photos/U-FM.jpg', alt: 'Photo 1', caption: 'My parents and I at my physics degree graduation from UNAH 🙃' },
+    { src: '/photos/U-FS.jpg', alt: 'Photo 2', caption: 'My sister, my dad, and I at my physics graduation from UNAH 🙂' },
+    { src: '/photos/USisterS.jpg', alt: 'Photo 2', caption: 'My other sister and I at the UNAH graduation.🙂' },
   ],
   "High School Graduation": [
-    { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'I remember that I hated high school 🧐' },
-    { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: '🙂' },
+    { src: '/photos/cole.jpg', alt: 'Photo 1', caption: 'Here I am, finally done with high school 🧐' },
+    { src: '/photos/coleMF.jpg', alt: 'Photo 2', caption: 'I, my mom, and dad.🤗' },
   ],
 };
 

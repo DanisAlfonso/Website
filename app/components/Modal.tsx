@@ -1,5 +1,5 @@
-// app/components/Modal.tsx
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 interface ModalProps {
   isOpen: boolean;
@@ -10,15 +10,36 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, photos, currentIndex, setCurrentIndex }) => {
-  if (!isOpen) return null;
-
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((currentIndex + 1) % photos.length);
-  };
+  }, [currentIndex, photos.length, setCurrentIndex]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
-  };
+  }, [currentIndex, photos.length, setCurrentIndex]);
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'ArrowRight') {
+      handleNext();
+    } else if (e.key === 'ArrowLeft') {
+      handlePrev();
+    } else if (e.key === 'Escape') {
+      onClose();
+    }
+  }, [handleNext, handlePrev, onClose]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.removeEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, handleKeyDown]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
@@ -36,10 +57,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, photos, currentIndex, se
           >
             &larr;
           </button>
-          <img
+          <Image
             src={photos[currentIndex].src}
             alt={photos[currentIndex].alt}
-            className="max-w-full max-h-[80vh] object-contain"
+            width={800}
+            height={600}
+            className="max-w-full max-h-[80vh] object-contain transition-all duration-300 ease-in-out"
           />
           <button
             onClick={handleNext}
