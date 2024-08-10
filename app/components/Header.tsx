@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           <nav className="hidden md:flex space-x-4 items-center">
             {[
-              { name: 'Projects', href: '/projects' },
+              { name: 'Builds', href: '/projects' },
               { name: 'Music', href: '/music' },
               { name: 'Photos', href: '/photography' },
               { name: 'Blog', href: '/blog' },
